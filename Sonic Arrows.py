@@ -9,7 +9,7 @@ pygame.init()
 # ---------------- CONFIG ----------------
 WIDTH, HEIGHT = 800, 600
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Sonic Arrow Lapse!")
+pygame.display.set_caption("Sonic Arrows!")
 CLOCK = pygame.time.Clock()
 FPS = 60
 
@@ -164,10 +164,10 @@ play_again_button = Button((WIDTH//2 - 100, HEIGHT - 100, 200, 50), "Play Again"
 def trigger_game_over():
     game["game_over"] = True
     elapsed = (pygame.time.get_ticks() - game["start_time"]) / 1000
-    if elapsed < 3: game["rank"] = "D"
-    elif elapsed < 4: game["rank"] = "C"
-    elif elapsed < 6: game["rank"] = "B"
-    elif elapsed < 9: game["rank"] = "A"
+    if elapsed < 30: game["rank"] = "D"
+    elif elapsed < 45: game["rank"] = "C"
+    elif elapsed < 60: game["rank"] = "B"
+    elif elapsed < 90: game["rank"] = "A"
     else: game["rank"] = "S"
     game["rank_gif"] = RANK_GIFS[game["rank"]]
 
@@ -202,11 +202,11 @@ while True:
     if not game_started:
         SCREEN.blit(INTRO_IMAGE, intro_rect)
         draw_outlined_text(
-            "Sonic Arrow Lapse!",
+            "Sonic Arrows!",
             BIG_FONT,
             GOLD,
             SONIC_BLUE,
-            (WIDTH//2 - 210, BAR_Y//2 + 240),
+            (WIDTH//2 - 150, BAR_Y//2 + 240),
             thickness=5
         )
         start_button.draw(SONIC_BLUE)
