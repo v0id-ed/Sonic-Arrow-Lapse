@@ -1,4 +1,6 @@
-This is a fanmade retro Sonic game featuring arrows! Requires Python 3.12, Pillow, and Pygame installed
+This is a fanmade retro Sonic game featuring endless arrows! Requires Python 3.12, Pillow, and Pygame installed
+
+(use arrow keys for correct arrows)
 
 Rank D: fail
 
