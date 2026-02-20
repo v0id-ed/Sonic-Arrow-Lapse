@@ -15,7 +15,7 @@ FPS = 60
 GAME_DURATION = 120  # seconds
 
 # ---------------- COLORS ----------------
-GRAY = (150, 150, 150)
+GRAY = (54,69,79)
 BLACK = (0, 0, 0)
 YELLOW = (255, 230, 0)
 
